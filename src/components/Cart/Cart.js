@@ -12,6 +12,17 @@ function Cart({ cart, totalItems }) {
   const WithItemsCart = () => (
     <>
       <div className="col">
+        <div className="cart-list-header">
+          <div className="">
+            <span>Imagem</span>
+          </div>
+          <div className="">
+            <span>Nome</span>
+          </div>
+          <div className="">
+            <span>Quantidade</span>
+          </div>
+        </div>
       {cart.map((cart) => (
         <div key={cart.uid}>
           <CartItem cart={cart}></CartItem>       

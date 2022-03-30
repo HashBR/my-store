@@ -6,7 +6,7 @@
 
 .store-item{
   border-radius: 0.25rem;
-  height: 300px;
+  height: 330px;
   width:  250px;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
 }
 
 .store-item a .product-title{
-  height: 50px;
+  height: 40px;
   font-weight: 800;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,13 @@
   color: rgb(0, 0, 0, 0.7) ;
 }
 
+.store-item a .product-title h6{
+  margin-bottom: 0px;
+}
+
+
 .store-item a .product-image{
-  height: 150px;
+  height: 160px;
   border: 4px;
   border-color: rgb(255, 250, 229);
   border-style: solid;
@@ -58,7 +63,7 @@
 }
 
 .store-item a .product-desc{
-  height: 70px;
+  height: 100px;
   align-items: center;
   justify-content: center;
   font-style: italic;
@@ -76,11 +81,18 @@
   padding: 0px 10px;
 }
 
+.cart-list-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .cart-item{
   border-radius: 0.25rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border: 2px;
   border-color: rgb(255, 250, 229);
@@ -90,11 +102,19 @@
 a.cart-item:hover, a.cart-item:focus, a.cart-item:active{
   background-color: rgb(255, 250, 229);
   border-radius: 0.25rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   border: 2px;
   border-color: rgb(255, 250, 229);
   border-style: solid;
+}
+
+.cart-item-image{
+  height: 80px;
+  border: 4px;
+  border-color: rgb(255, 250, 229);
+  border-style: solid;
+}
+
+.cart-item-image img{
+  max-width: 100%;
+  max-height: 100%;
 }

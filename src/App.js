@@ -5,26 +5,29 @@ import {v4 as uuidv4} from 'uuid'
 function App() {
   const [totalCart, setTotalCart] = useState(0);
   const [cart, setCart] = useState([]);
+  
   // Vai fazer assim que iniciar
   useEffect(() =>{
-    //Algo que faz quando abre página
     console.log("Iniciou")
   }, []);
 
-  const handleAddToCart = ( productId, quantity ) => {
-    // debugger
+  // Sempre que clicar em um produto para add no cart
+  const handleAddToCart = ( productId, name, img, quantity ) => {
     setTotalCart(totalCart + 1)
     const found = cart.find((item)=> (item.productId === productId)) 
     if(found) {
       found.quantity++     
     } else {
       // Pega o anterior, e adiciona mais um elemento
-      setCart(oldCart => {
-        return [...oldCart, {uid: uuidv4(), productId: productId, quantity: quantity}]
-      });
+      setCart([...cart, {uid: uuidv4(), productId: productId, name: name, img: img, quantity: quantity}]
+      );
     }
-    console.log(totalCart)
   }
+
+  //Faz toda vez que o objeto cart tem alteração
+  // useEffect(() => {
+  //   console.log(cart);
+  // }, [cart]);
 
   return (
     <div className="App">

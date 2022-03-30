@@ -2,7 +2,7 @@ import React from 'react'
 
 const Product = ({ product, onAddToCart }) => {
   return (
-    <div className="hover-shadow store-item"><a href="#" onClick={() => onAddToCart(product.id, 1)}>
+    <div className="hover-shadow store-item"><a href="#" onClick={() => onAddToCart(product.id, product.name, product.img, 1)}>
       <div className="product-title">
         <h6 className="fw-bold">{product.name}</h6>
       </div>
@@ -10,7 +10,7 @@ const Product = ({ product, onAddToCart }) => {
         <img src={product.img} alt={product.id}></img>
       </div>
       <div className="product-desc">
-        <span>{product.desc}</span>
+        <span className='fs-6 text'>{product.desc}</span>
       </div>
       <div className="text-warning border-top product-price">
         <s className="text-warning text-opacity-50 fs-6 text">R$ 69,99</s>
