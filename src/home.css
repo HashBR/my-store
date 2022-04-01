@@ -5,8 +5,9 @@
 }
 
 .store-item{
+  cursor: pointer;
   border-radius: 0.25rem;
-  height: 330px;
+  height: 390px;
   width:  250px;
   display: flex;
   flex-direction: column;
@@ -17,11 +18,32 @@
   border-style: solid;
 }
 
-.store-item:hover {
-  box-shadow: 0 0 20px 8px rgb(255, 250, 229);
+
+.store-item .add-to-cart{
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  height: 390px;
+  width:  250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px;
+  border-color: rgb(255, 250, 229);
+  border-style: solid;
+  transition: 800ms ease-in-out;
 }
 
-.store-item a{
+/* .store-item .add-to-cart:hover{ */
+.store-item .add-to-cart:hover{
+  opacity: 1;
+  background-color: rgba(255, 250, 229, 0.9);
+  transition: 150ms ease-in-out;
+}
+
+.store-item div{
   text-decoration: none;
   color: black;
   display: flex;
@@ -31,12 +53,12 @@
   width: 100%;
 }
 
-.store-item a:hover, a:focus, a:active{
+.store-item div:hover, div:focus, div:active{
   text-decoration: none;
   color: inherit;
 }
 
-.store-item a .product-title{
+.store-item div .product-title{
   height: 40px;
   font-weight: 800;
   display: flex;
@@ -45,32 +67,29 @@
   color: rgb(0, 0, 0, 0.7) ;
 }
 
-.store-item a .product-title h6{
+.store-item div .product-title h6{
   margin-bottom: 0px;
 }
 
 
-.store-item a .product-image{
-  height: 160px;
-  border: 4px;
-  border-color: rgb(255, 250, 229);
-  border-style: solid;
+.store-item div .product-image{
+  height: 210px;
 }
 
-.store-item a .product-image img{
+.store-item div .product-image img{
   max-width: 100%;
   max-height: 100%;
 }
 
-.store-item a .product-desc{
-  height: 100px;
+.store-item div .product-desc{
+  height: 110px;
   align-items: center;
   justify-content: center;
   font-style: italic;
   padding: 5px 10px;
 }
 
-.store-item a .product-price{
+.store-item div .product-price{
   height: 30px;
   align-items: center;
   justify-content: space-evenly;
@@ -117,4 +136,24 @@ a.cart-item:hover, a.cart-item:focus, a.cart-item:active{
 .cart-item-image img{
   max-width: 100%;
   max-height: 100%;
+}
+
+.carousel-root {
+  background-color: rgb(243, 201, 80);
+}
+
+.carousel-center {
+  position: relative;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-inverted {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
