@@ -2,7 +2,7 @@ import React from 'react'
 
 const CartItem = ({ cart }) => {
   return (
-    <a className="hover-shadow cart-item">
+    <div className="hover-shadow cart-item">
       <div className="cart-item-image">
         <img src={cart.img} alt={cart.name}></img>
       </div>
@@ -12,7 +12,10 @@ const CartItem = ({ cart }) => {
       <div className="cart-item-quantity">
         <span>{cart.quantity}</span>
       </div>
-    </a>
+      <div className="cart-item-total">
+        <span>{(cart.price*cart.quantity).toFixed(2)}</span>
+      </div>
+    </div>
   )
 }
 

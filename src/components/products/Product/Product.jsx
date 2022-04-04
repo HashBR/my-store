@@ -3,7 +3,7 @@ import { FaCartPlus } from 'react-icons/fa';
 
 const Product = ({ product, onAddToCart }) => {
   return (
-    <div className="hover-shadow store-item"><div onClick={() => onAddToCart(product.id, product.name, product.img, 1)}>
+    <div className="hover-shadow store-item"><div onClick={() => onAddToCart(product.id, product.name, product.img, product.price, 1)}>
       <div>
         <div className="product-title">
           <h6 className="fw-bold">{product.name}</h6>

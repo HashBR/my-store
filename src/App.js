@@ -12,14 +12,14 @@ function App() {
   }, []);
 
   // Sempre que clicar em um produto para add no cart
-  const handleAddToCart = ( productId, name, img, quantity ) => {
+  const handleAddToCart = ( productId, name, img, price, quantity ) => {
     setTotalCart(totalCart + 1)
     const found = cart.find((item)=> (item.productId === productId)) 
     if(found) {
       found.quantity++     
     } else {
       // Pega o anterior, e adiciona mais um elemento
-      setCart([...cart, {uid: uuidv4(), productId: productId, name: name, img: img, quantity: quantity}]
+      setCart([...cart, {uid: uuidv4(), productId: productId, name: name, img: img, price: price, quantity: quantity}]
       );
     }
   }
